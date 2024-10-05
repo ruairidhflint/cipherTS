@@ -1,7 +1,7 @@
 import { alphabet } from '../constants';
 import { createTabulaRecta } from '../utils/createTabularRecta';
 
-export const encrypt = (keyword: string, plaintext: string) => {
+const encrypt = (keyword: string, plaintext: string) => {
   if (plaintext.length <= keyword.length) {
     throw new Error('For effective use, the keyword must be shorter than the text to be encrypted');
   }
@@ -28,4 +28,40 @@ export const encrypt = (keyword: string, plaintext: string) => {
     output += tabula[letter][indexInTabula];
   }
   return output;
+};
+
+const decrypt = (keyword: string, ciphertext: string) => {
+  if (ciphertext.length <= keyword.length) {
+    throw new Error('For effective use, the keyword must be shorter than the text to be decrypted');
+  }
+
+  const tabula = createTabulaRecta();
+
+  let keyString = keyword;
+
+  while (keyString.length < ciphertext.length) {
+    const remaining = ciphertext.length - keyString.length;
+    if (remaining >= keyword.length) {
+      keyString += keyword;
+    } else {
+      keyString += keyword.substring(0, remaining);
+    }
+  }
+
+  let output = '';
+
+  for (let i = 0; i < ciphertext.length; i++) {
+    const cipherLetter = ciphertext[i];
+    const keyLetter = keyString[i];
+    const row = tabula[keyLetter];
+    const plainTextIndex = row.indexOf(cipherLetter);
+    output += alphabet[plainTextIndex];
+  }
+
+  return output;
+};
+
+export const vigenere = {
+  encrypt: encrypt,
+  decrypt: decrypt,
 };
