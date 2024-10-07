@@ -11,9 +11,7 @@ describe('shiftCharsByN', () => {
   });
 
   test('throws error when n is greater than or equal to string length', () => {
-    expect(() => shiftCharsByN('abc', 4)).toThrow(
-      'String must be shorter than number of letters to shift',
-    );
+    expect(() => shiftCharsByN('abc', 4)).toThrow('Shift value must be less than 27');
   });
 
   test('works with empty string', () => {
@@ -30,6 +28,8 @@ describe('shiftCharsByN', () => {
   });
 
   test('throws error for negative n', () => {
-    expect(() => shiftCharsByN('hello world', -3)).toThrow('n cannot be a negative integer');
+    expect(() => shiftCharsByN('hello world', -3)).toThrow(
+      'Shift value cannot be a negative intege',
+    );
   });
 });

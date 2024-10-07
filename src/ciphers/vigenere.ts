@@ -2,7 +2,7 @@ import { alphabet } from '../constants';
 import { createTabulaRecta } from '../utils/createTabularRecta';
 import { withInputNormalization } from '../utils/withInputNormalization';
 
-const encrypt = (keyword: string, plaintext: string) => {
+const encrypt = (plaintext: string, keyword: string) => {
   if (plaintext.length <= keyword.length) {
     throw new Error('For effective use, the keyword must be shorter than the text to be encrypted');
   }
@@ -31,7 +31,7 @@ const encrypt = (keyword: string, plaintext: string) => {
   return output;
 };
 
-const decrypt = (keyword: string, ciphertext: string) => {
+const decrypt = (ciphertext: string, keyword: string) => {
   if (ciphertext.length <= keyword.length) {
     throw new Error('For effective use, the keyword must be shorter than the text to be decrypted');
   }
@@ -64,5 +64,5 @@ const decrypt = (keyword: string, ciphertext: string) => {
 
 export const vigenere = {
   encrypt: withInputNormalization(encrypt),
-  decrypt: withInputNormalization(encrypt),
+  decrypt: withInputNormalization(decrypt),
 };
