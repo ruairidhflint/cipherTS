@@ -1,5 +1,6 @@
 import { alphabet } from '../constants';
 import { CipherText, PlainText } from '../types';
+import { withInputNormalization } from '../utils/withInputNormalization';
 
 const encrypt = (plaintext: PlainText): CipherText => {
   let output = '';
@@ -12,6 +13,6 @@ const encrypt = (plaintext: PlainText): CipherText => {
 };
 
 export const atbash = {
-  encrypt: encrypt,
-  decrypt: encrypt,
+  encrypt: withInputNormalization(encrypt),
+  decrypt: withInputNormalization(encrypt),
 };

@@ -1,5 +1,6 @@
 import { alphabet } from '../constants';
 import { createTabulaRecta } from '../utils/createTabularRecta';
+import { withInputNormalization } from '../utils/withInputNormalization';
 
 const encrypt = (keyword: string, plaintext: string) => {
   if (plaintext.length <= keyword.length) {
@@ -62,6 +63,6 @@ const decrypt = (keyword: string, ciphertext: string) => {
 };
 
 export const vigenere = {
-  encrypt: encrypt,
-  decrypt: decrypt,
+  encrypt: withInputNormalization(encrypt),
+  decrypt: withInputNormalization(encrypt),
 };

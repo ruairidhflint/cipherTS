@@ -1,5 +1,6 @@
 import { alphabet } from '../constants';
 import { CipherText, PlainText } from '../types';
+import { withInputNormalization } from '../utils/withInputNormalization';
 
 const relativePrimes = [1, 3, 5, 7, 8, 11, 15, 17, 19, 21, 23, 25];
 
@@ -56,6 +57,6 @@ const decrypt = (ciphertext: CipherText, a: number, b: number): PlainText => {
 };
 
 export const affine = {
-  encrypt: encrypt,
-  decrypt: decrypt,
+  encrypt: withInputNormalization(encrypt),
+  decrypt: withInputNormalization(decrypt),
 };

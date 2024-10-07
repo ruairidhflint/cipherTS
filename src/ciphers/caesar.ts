@@ -1,6 +1,7 @@
 import { alphabet } from '../constants';
 import { CipherText, PlainText } from '../types';
 import { shiftCharsByN } from '../utils/shiftCharsByN';
+import { withInputNormalization } from '../utils/withInputNormalization';
 
 const encrypt = (plaintext: PlainText, shift: number): CipherText => {
   let output = '';
@@ -23,6 +24,6 @@ const decrypt = (ciphertext: CipherText, shift: number): CipherText => {
 };
 
 export const caesar = {
-  encrypt,
-  decrypt,
+  encrypt: withInputNormalization(encrypt),
+  decrypt: withInputNormalization(decrypt),
 };

@@ -1,6 +1,7 @@
 import { alphabet } from '../constants';
 import { CipherText, PlainText } from '../types';
 import { shiftCharsByN } from '../utils/shiftCharsByN';
+import { withInputNormalization } from '../utils/withInputNormalization';
 
 const encrypt = (plaintext: PlainText): CipherText => {
   let output = '';
@@ -13,6 +14,6 @@ const encrypt = (plaintext: PlainText): CipherText => {
 };
 
 export const rot13 = {
-  encrypt: encrypt,
-  decrypt: encrypt,
+  encrypt: withInputNormalization(encrypt),
+  decrypt: withInputNormalization(encrypt),
 };
