@@ -1,11 +1,15 @@
-- ADFGX Cipher
-- ADFGVX Cipher
 - Affine Cipher ✅
 - Autokey Cipher ✅
 - Atbash Cipher ✅
+- Rot13 Cipher ✅
+- Substitution Cipher ✅
+- Vigenere Cipher ✅
+- Caesar Cipher ✅
+
 - Beaufort Cipher
 - Bifid Cipher
-- Caesar Cipher ✅
+- ADFGX Cipher
+- ADFGVX Cipher
 - Columnar Transposition Cipher
 - Enigma M3 Cipher
 - Foursquare Cipher
@@ -15,6 +19,3 @@
 - Polybius Square Cipher
 - Porta Cipher
 - Railfence Cipher
-- Rot13 Cipher ✅
-- Simple Substitution Cipher ✅
-- Vigenere Cipher ✅
