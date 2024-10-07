@@ -1,0 +1,20 @@
+- ADFGX Cipher
+- ADFGVX Cipher
+- Affine Cipher ✅
+- Autokey Cipher
+- Atbash Cipher ✅
+- Beaufort Cipher
+- Bifid Cipher
+- Caesar Cipher ✅
+- Columnar Transposition Cipher
+- Enigma M3 Cipher
+- Foursquare Cipher
+- Gronsfeld Cipher
+- M-209 Cipher
+- Playfair Cipher
+- Polybius Square Cipher
+- Porta Cipher
+- Railfence Cipher
+- Rot13 Cipher ✅
+- Simple Substitution Cipher
+- Vigenere Cipher ✅
