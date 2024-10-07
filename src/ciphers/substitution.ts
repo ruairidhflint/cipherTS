@@ -15,7 +15,7 @@ const encrypt = (plaintext: PlainText, keyword: string): CipherText => {
       adjustedAlphabet += alphabet[i];
     }
   }
-  adjustedAlphabet = keyword + adjustedAlphabet;
+  adjustedAlphabet = keywordWithoutDuplicates + adjustedAlphabet;
 
   let output = '';
 
@@ -38,7 +38,7 @@ const decrypt = (ciphertext: CipherText, keyword: string): PlainText => {
       adjustedAlphabet += alphabet[i];
     }
   }
-  adjustedAlphabet = keyword + adjustedAlphabet;
+  adjustedAlphabet = keywordWithoutDuplicates + adjustedAlphabet;
 
   let output = '';
 

@@ -7,7 +7,7 @@ describe('caesar', () => {
     expect(caesar.encrypt('helloworld', 5)).toBe('mjqqtbtwqi');
     expect(caesar.encrypt('helloworld', 7)).toBe('olssvdvysk');
   });
-  test('expect valid  string to correctly encrypt with valid shift', () => {
+  test('expect valid  string to correctly decrypt with valid shift', () => {
     expect(caesar.decrypt('ifmmpxpsme', 1)).toBe('helloworld');
     expect(caesar.decrypt('khoorzruog', 3)).toBe('helloworld');
     expect(caesar.decrypt('mjqqtbtwqi', 5)).toBe('helloworld');
