@@ -1,7 +1,7 @@
 - ADFGX Cipher
 - ADFGVX Cipher
 - Affine Cipher ✅
-- Autokey Cipher
+- Autokey Cipher ✅
 - Atbash Cipher ✅
 - Beaufort Cipher
 - Bifid Cipher
@@ -16,5 +16,5 @@
 - Porta Cipher
 - Railfence Cipher
 - Rot13 Cipher ✅
-- Simple Substitution Cipher
+- Simple Substitution Cipher ✅
 - Vigenere Cipher ✅
