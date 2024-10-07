@@ -5,7 +5,7 @@ describe('atbash', () => {
     expect(atbash.encrypt('helloworld')).toBe('svooldliow');
   });
 
-  test('expect valid  string to correctly encrypt', () => {
+  test('expect valid  string to correctly decrypt', () => {
     expect(atbash.decrypt('svooldliow')).toBe('helloworld');
   });
 
