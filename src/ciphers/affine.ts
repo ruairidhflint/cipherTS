@@ -13,9 +13,9 @@ const alphabetDictionary = [...alphabet].reduce(
 );
 
 const encrypt = (plaintext: PlainText, a: number, b: number): CipherText => {
-  if (a < 0 || b < 0 || a > 25 || b > 25 || !relativePrimes.includes(a)) {
+  if (a < 0 || b <= 0 || a > 25 || b > 25 || !relativePrimes.includes(a)) {
     throw new Error(
-      'Both a and b must be positive integers beloew 26. In addition, a should have no common factors to 26,',
+      'Both a and b must be positive integers below 26. In addition, a should have no common factors to 26',
     );
   }
 
@@ -30,9 +30,9 @@ const encrypt = (plaintext: PlainText, a: number, b: number): CipherText => {
 };
 
 const decrypt = (ciphertext: CipherText, a: number, b: number): PlainText => {
-  if (a < 0 || b < 0 || a > 25 || b > 25 || !relativePrimes.includes(a)) {
+  if (a < 0 || b <= 0 || a > 25 || b > 25 || !relativePrimes.includes(a)) {
     throw new Error(
-      'Both a and b must be positive integers below 26. In addition, a should have no common factors to 26.',
+      'Both a and b must be positive integers below 26. In addition, a should have no common factors to 26',
     );
   }
 
