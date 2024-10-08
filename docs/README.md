@@ -13,6 +13,7 @@ A selection of classic [ciphers](https://en.wikipedia.org/wiki/Cipher) implement
   - [Affine Cipher](#affine-cipher)
   - [Autokey Cipher](#autokey-cipher)
   - [Atbash Cipher](#atbash-cipher)
+  - [Rail Fence Cipher](#rail-fence-cipher)
   - [Rot13 Cipher](#rot13-cipher)
   - [Substitution Cipher](#substitution-cipher)
   - [Vigenere Cipher](#vigenere-cipher)

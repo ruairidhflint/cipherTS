@@ -1,8 +1,6 @@
 <!-- markdownlint-disable first-line-h1 -->
 
-<!-- ![logo](_media/icon.svg) -->
-
-# cipherTS <small>0.1.0</small>
+# cipherTS <small>0.1.1</small>
 
 > A selection of classic ciphers implemented in TypeScript
 
