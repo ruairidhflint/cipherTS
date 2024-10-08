@@ -10,7 +10,7 @@
 - No external dependencies
 - Fully tested
 
-[Get Started](#cipherTs)
 [GitHub](https://github.com/ruairidhflint/cipherTS/)
+[Get Started](#cipherTs)
 
 ![color](#ecfdf5)
