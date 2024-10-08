@@ -15,8 +15,8 @@ describe('vigenere', () => {
     expect(() => vigenere.encrypt('helloworld', 'helloworld')).toThrow(
       'For effective use, the keyword must be shorter than the text to be encrypted',
     );
-    expect(() => vigenere.encrypt('helloworld', 'helloworldhello')).toThrow(
-      'For effective use, the keyword must be shorter than the text to be encrypted',
+    expect(() => vigenere.decrypt('helloworld', 'helloworldhello')).toThrow(
+      'For effective use, the keyword must be shorter than the text to be decrypted',
     );
   });
 

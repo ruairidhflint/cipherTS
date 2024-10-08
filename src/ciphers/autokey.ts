@@ -32,7 +32,9 @@ const encrypt = (plaintext: string, keyword: string) => {
 
 const decrypt = (ciphertext: string, keyword: string) => {
   if (ciphertext.length <= keyword.length) {
-    throw new Error('For effective use, the keyword must be shorter than the text to be decrypted');
+    throw new Error(
+      'For effective use, the keyword must be less than 27 chars and shorter than or equal to than the text to be encrypted',
+    );
   }
 
   const tabula = createTabulaRecta();
@@ -67,6 +69,3 @@ export const autokey = {
   encrypt: withInputNormalization(encrypt),
   decrypt: withInputNormalization(decrypt),
 };
-
-console.log(encrypt('defendtheeastwallofthecastle', 'fortification'));
-console.log(decrypt('iswxvibjexiggzeqpbimoigakmhe', 'fortification'));

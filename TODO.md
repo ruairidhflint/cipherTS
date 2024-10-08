@@ -1,3 +1,5 @@
+## ciphers
+
 - Affine Cipher ✅
 - Autokey Cipher ✅
 - Atbash Cipher ✅
@@ -19,3 +21,12 @@
 - Polybius Square Cipher
 - Porta Cipher
 - Railfence Cipher
+
+## Other
+
+- Publish to NPM ✅
+- write initial usage docs
+- write docifu documentation
+- implement shields.io on repo
+- project logo
+- share on HN

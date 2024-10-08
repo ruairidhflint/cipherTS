@@ -15,7 +15,7 @@ describe('autokey', () => {
     expect(() => autokey.encrypt('helloworld', 'helloworld')).toThrow(
       'For effective use, the keyword must be less than 27 chars and shorter than or equal to than the text to be encrypted',
     );
-    expect(() => autokey.encrypt('helloworld', 'helloworldhello')).toThrow(
+    expect(() => autokey.decrypt('helloworld', 'helloworldhello')).toThrow(
       'For effective use, the keyword must be less than 27 chars and shorter than or equal to than the text to be encrypted',
     );
   });

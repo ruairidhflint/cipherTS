@@ -24,6 +24,10 @@ describe('substitution', () => {
     expect(() => substitution.encrypt('helloworld', 'zmrokpwtnsxvuqjcefdbhilygaass')).toThrow(
       'Keyword cannot be longer than 26 chars',
     );
+
+    expect(() => substitution.decrypt('helloworld', 'zmrokpwtnsxvuqjcefdbhilygaass')).toThrow(
+      'Keyword cannot be longer than 26 chars',
+    );
   });
 
   test('expect valid string with spaces to correctly encrypt without strings', () => {

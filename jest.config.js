@@ -6,5 +6,15 @@ module.exports = {
   transform: {
     '^.+\\.ts$': 'ts-jest',
   },
+  collectCoverage: true,
+  collectCoverageFrom: ['./src/**', '!**/index.ts'],
+  coverageThreshold: {
+    global: {
+      branches: 100,
+      functions: 100,
+      lines: 100,
+      statements: 100,
+    },
+  },
   moduleFileExtensions: ['ts', 'js', 'json', 'node'],
 };

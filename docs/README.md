@@ -1,3 +1,0 @@
-# cipherTS
-
-> An awesome project.
