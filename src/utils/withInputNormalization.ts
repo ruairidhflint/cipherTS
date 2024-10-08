@@ -1,5 +1,6 @@
 import { normaliseInput } from './normaliseInput';
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 type AnyFunction = (...args: any[]) => any;
 
 export function withInputNormalization<T extends AnyFunction>(fn: T): T {
