@@ -154,6 +154,29 @@ const decryptedText = atbash.decrypt(encryptedText);
 console.log('Decrypted:', decryptedText); // helloworld
 ```
 
+### Rail Fence Cipher
+
+A transposition cipher that writes the message in a zigzag pattern on a grid and then reads off each row.
+Read more [here](https://en.wikipedia.org/wiki/Rail_fence_cipher)
+
+**Usage Example**
+
+```javascript
+import { railfence } from 'cipherts';
+
+// Example usage
+const plaintext = 'helloworld';
+const rails = 3;
+
+// Encrypt the plaintext
+const encryptedText = railfence.encrypt(plaintext, rails);
+console.log('Encrypted:', encryptedText); // holelwrdlo
+
+// Decrypt the ciphertext
+const decryptedText = railfence.decrypt(encryptedText, rails);
+console.log('Decrypted:', decryptedText); // helloworld
+```
+
 ### Rot13 Cipher
 
 A special case of the Caesar cipher that rotates each letter by 13 positions in the alphabet.
@@ -268,6 +291,7 @@ The following ciphers are to be added in due course - feel free to raise a PR if
 - ~~Substitution Cipher~~
 - ~~Vigenere Cipher~~
 - ~~Caesar Cipher~~
+- ~~Railfence Cipher~~
 - Beaufort Cipher
 - Bifid Cipher
 - ADFGX Cipher
@@ -280,7 +304,6 @@ The following ciphers are to be added in due course - feel free to raise a PR if
 - Playfair Cipher
 - Polybius Square Cipher
 - Porta Cipher
-- Railfence Cipher
 
 ## Contributing
 
