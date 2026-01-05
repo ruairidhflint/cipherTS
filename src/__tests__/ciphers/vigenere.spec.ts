@@ -12,17 +12,17 @@ describe('vigenere', () => {
   });
 
   test('expect keyword longer than plaintext to work', () => {
-      expect(vigenere.encrypt('hi', 'abc')).toBe('hj');
-      expect(vigenere.decrypt('hj', 'abc')).toBe('hi');
+    expect(vigenere.encrypt('hi', 'abc')).toBe('hj');
+    expect(vigenere.decrypt('hj', 'abc')).toBe('hi');
   });
 
   test('expect valid string with empty keyword to throw', () => {
-     expect(() => vigenere.encrypt('hello', '')).toThrow(
-       'Only valid alphabetic characters are permitted'
-     );
-     expect(() => vigenere.decrypt('hello', '')).toThrow(
-       'Only valid alphabetic characters are permitted'
-     );
+    expect(() => vigenere.encrypt('hello', '')).toThrow(
+      'Only valid alphabetic characters are permitted',
+    );
+    expect(() => vigenere.decrypt('hello', '')).toThrow(
+      'Only valid alphabetic characters are permitted',
+    );
   });
 
   test('expect valid string with spaces to correctly encrypt without strings', () => {

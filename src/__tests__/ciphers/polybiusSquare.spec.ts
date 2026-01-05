@@ -21,10 +21,10 @@ describe('polybiusSquare', () => {
   test('expect decrypt to handle separators or noise', () => {
     expect(polybiusSquare.decrypt('23 15 31 31 34')).toBe('hello');
   });
-  
+
   test('expect decrypt to ignore invalid numbers', () => {
-      // 66 is invalid, ignored.
-      expect(polybiusSquare.decrypt('236615')).toBe('he');
+    // 66 is invalid, ignored.
+    expect(polybiusSquare.decrypt('236615')).toBe('he');
   });
 
   test('expect empty string to throw on encrypt', () => {
@@ -33,4 +33,3 @@ describe('polybiusSquare', () => {
     );
   });
 });
-

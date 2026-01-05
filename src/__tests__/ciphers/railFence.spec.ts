@@ -14,15 +14,15 @@ describe('railFence', () => {
   });
 
   test('expect rails >= plaintext length to return plaintext', () => {
-      // The implementation allows rails >= length now.
-      // If rails >= length, it just writes diagonal down and that's it.
-      // "hi", rails 5.
-      // h . . . .
-      // . i . . .
-      // . . . . .
-      // read rows: hi
-      expect(railFence.encrypt('hi', 5)).toBe('hi');
-      expect(railFence.decrypt('hi', 5)).toBe('hi');
+    // The implementation allows rails >= length now.
+    // If rails >= length, it just writes diagonal down and that's it.
+    // "hi", rails 5.
+    // h . . . .
+    // . i . . .
+    // . . . . .
+    // read rows: hi
+    expect(railFence.encrypt('hi', 5)).toBe('hi');
+    expect(railFence.decrypt('hi', 5)).toBe('hi');
   });
 
   test('expect valid string with spaces to correctly encrypt without strings', () => {

@@ -3,22 +3,22 @@ import { columnarTransposition } from '../../ciphers/columnarTransposition';
 describe('columnarTransposition', () => {
   test('expect valid string to correctly encrypt', () => {
     expect(columnarTransposition.encrypt('defendtheeastwallofthecastle', 'german')).toBe(
-      'nalcehwttdttfseeleedsoafeahl'
+      'nalcehwttdttfseeleedsoafeahl',
     );
   });
 
   test('expect valid string to correctly decrypt', () => {
-    expect(
-      columnarTransposition.decrypt('nalcehwttdttfseeleedsoafeahl', 'german')
-    ).toBe('defendtheeastwallofthecastle');
+    expect(columnarTransposition.decrypt('nalcehwttdttfseeleedsoafeahl', 'german')).toBe(
+      'defendtheeastwallofthecastle',
+    );
   });
 
   test('expect empty keyword to throw', () => {
     expect(() => columnarTransposition.encrypt('hello', '')).toThrow(
-      'Only valid alphabetic characters are permitted'
+      'Only valid alphabetic characters are permitted',
     );
     expect(() => columnarTransposition.decrypt('hello', '')).toThrow(
-      'Only valid alphabetic characters are permitted'
+      'Only valid alphabetic characters are permitted',
     );
   });
 
@@ -27,7 +27,7 @@ describe('columnarTransposition', () => {
     // key: german (6 chars)
     // Encrypted: nalehwdtteeldsfea
     expect(columnarTransposition.encrypt('defend the east wall', 'german')).toBe(
-        'nalehwdtteeldsfea'
+      'nalehwdtteeldsfea',
     );
   });
 
