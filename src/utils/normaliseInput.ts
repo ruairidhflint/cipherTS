@@ -3,5 +3,5 @@ export const normaliseInput = (input: string) => {
   if (!regex.test(input)) {
     throw new Error('Only valid alphabetic characters are permitted');
   }
-  return input.toLowerCase().replace(' ', '');
+  return input.toLowerCase().replace(/\s/g, '');
 };

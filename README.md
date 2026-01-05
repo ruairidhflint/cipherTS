@@ -12,17 +12,48 @@ A selection of classic [ciphers](https://en.wikipedia.org/wiki/Cipher) implement
 
 You can install CipherTS using npm or yarn.
 
-## Using npm
+### Using npm
 
 ```bash
 npm install cipherts
 ```
 
-## Using yarn
+### Using yarn
 
 ```bash
 yarn add cipherts
 ```
+
+## Usage
+
+```typescript
+import { caesar, vigenere, railFence } from 'cipherts';
+
+// Caesar Cipher
+const caesarEncrypted = caesar.encrypt('hello world', 3);
+const caesarDecrypted = caesar.decrypt(caesarEncrypted, 3);
+
+// Vigenère Cipher
+const vigenereEncrypted = vigenere.encrypt('hello world', 'key');
+const vigenereDecrypted = vigenere.decrypt(vigenereEncrypted, 'key');
+
+// Rail Fence Cipher
+const railEncrypted = railFence.encrypt('hello world', 3);
+```
+
+## Supported Ciphers
+
+- **Affine**: Substitution cipher using a mathematical function.
+- **Atbash**: Substitution cipher reversing the alphabet.
+- **Autokey**: Polyalphabetic substitution similar to Vigenère but uses plaintext as key.
+- **Beaufort**: Substitution cipher similar to Vigenère, using `(Key - Plain)`.
+- **Caesar**: Simple substitution cipher shifting letters.
+- **Columnar Transposition**: Transposition cipher writing text in rows and reading columns.
+- **Polybius Square**: Fractionating cipher representing letters with coordinates.
+- **Rail Fence**: Transposition cipher writing text in a zigzag pattern.
+- **ROT13**: Special case of Caesar cipher with shift 13.
+- **Substitution**: Simple substitution using a custom alphabet map.
+- **Vigenère**: Polyalphabetic substitution using a keyword.
 
 ## Requirements
 
@@ -35,22 +66,6 @@ CipherTS supports both CommonJS and ES Modules:
 
 - CommonJS: `require('cipherts')`
 - ES Modules: `import cipherts from 'cipherts'`
-
-## Verifying the Installation
-
-After installation, you can verify that CipherTS is correctly installed by running:
-
-```bash
-npm list cipherts
-```
-
-or
-
-```bash
-yarn why cipherts
-```
-
-This should display the installed version of CipherTS.
 
 ## Development
 

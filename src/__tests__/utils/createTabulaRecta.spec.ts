@@ -1,5 +1,5 @@
 import { alphabet } from '../../constants';
-import { createTabulaRecta } from '../../utils/createTabularRecta';
+import { createTabulaRecta } from '../../utils/createTabulaRecta';
 
 describe('createTabulaRecta', () => {
   test('should contain all letters of the alphabet', () => {

@@ -6,10 +6,6 @@ const encrypt = (plaintext: PlainText, rails: number) => {
     throw new Error('Number of rails must be 2 or greater');
   }
 
-  if (rails >= plaintext.length) {
-    throw new Error('Number of rails must be fewer than the plaintext length');
-  }
-
   const fence: string[][] = Array(rails)
     .fill(null)
     .map(() => Array(plaintext.length).fill('-'));
@@ -44,10 +40,6 @@ const decrypt = (ciphertext: CipherText, rails: number) => {
     throw new Error('Number of rails must be 2 or greater');
   }
 
-  if (rails >= ciphertext.length) {
-    throw new Error('Number of rails must be fewer than the ciphertext length');
-  }
-
   const fence: string[][] = Array(rails)
     .fill(null)
     .map(() => Array(ciphertext.length).fill('-'));
@@ -77,7 +69,7 @@ const decrypt = (ciphertext: CipherText, rails: number) => {
   let index = 0;
   for (let i = 0; i < rails; i++) {
     for (let j = 0; j < ciphertext.length; j++) {
-      if (fence[i][j] === '*') {
+      if (fence[i][j] === '*' && index < ciphertext.length) {
         fence[i][j] = ciphertext[index++];
       }
     }

@@ -1,5 +1,5 @@
 import { alphabet } from '../constants';
-import { createTabulaRecta } from '../utils/createTabularRecta';
+import { createTabulaRecta } from '../utils/createTabulaRecta';
 import { withInputNormalization } from '../utils/withInputNormalization';
 
 const encrypt = (plaintext: string, keyword: string) => {
